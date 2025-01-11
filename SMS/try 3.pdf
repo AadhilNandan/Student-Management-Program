@@ -45,7 +45,7 @@ def open_login_window():
     login_window.geometry(s_size)
     login_window.state('zoomed')
 
-    # Frame and Buttons for Login Window
+    # Frame and Buttons foe Login Window
     login_frame = ctk.CTkFrame(login_window, width=500, height=1000, corner_radius=15)
     login_frame.place(relx=0.5, rely=0.5, anchor="center")
 
@@ -275,7 +275,7 @@ def view_details(Frame):
         table_canvas.configure(scrollregion=table_canvas.bbox("both"), background="#2B2B2B", width=(s_width-s_width//8) - 250, height=s_height-150)
 
     def load_data(table_canvas, table_content):
-        global data, headers
+#        global data, headers
         try:
 
             data, header = db_data_retriever()
@@ -285,7 +285,7 @@ def view_details(Frame):
             tkmb.showerror("Error", f"Could not load database: {e}")
 
     def display_table(table_canvas, table_content):
-        global data, headers
+#        global data, headers
 
         for widget in table_content.winfo_children():
             widget.destroy()
